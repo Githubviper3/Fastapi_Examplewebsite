@@ -27,5 +27,5 @@ Once done, you should see the following prompt:<br>
 
 Check the box, and you're all set!
 
-<!--try using render
+<!-- Gotta try them all using render
 https://docs.render.com/free -->
