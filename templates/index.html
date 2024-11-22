@@ -1,18 +1,19 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Item Details</title>
+    <title>Web Project</title>
     <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
-    <script src="{{ url_for('static', path='/script.css') }}"></script>
+    <script src="{{ url_for('static', path='/script.js') }}"></script>
 </head>
 <body>
 
     <div class="MainCard">
-        <h1>W3schools</h1>
+        <h1>W3Schools</h1>
         <div class="grid-container">
           <div>
-            <a href="https://w3schools.com/" target="_blank"
-              ><img src="{{ url_for('static', path='/W3S_Logo.png') }}" rel="noopener noreferrer"
-            /></a>
+            <a href="https://w3schools.com/" target="_blank">
+              <img src="{{ url_for('static', path='/W3S_Logo.png') }}" rel="noopener noreferrer"/>
+            </a>
           </div>
           <div>
             <p>
@@ -23,10 +24,10 @@
           </div>
           <div>
             <p>
-              This image will send you to a the search bar of w3schools. This
-              button will take you to a random tutorial page of w3schools.
+              This image will send you to the search bar of W3Schools. This
+              button will take you to a random tutorial page of W3Schools.
             </p>
-            <button id="Random" onclick="RandomLinkOpener()">Go</button>
+            <button id="Random" onclick="openRandomLink()">Go</button>
           </div>
       </div>
 </body>

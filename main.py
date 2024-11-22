@@ -9,18 +9,20 @@ from bs4 import BeautifulSoup
 
 app = FastAPI()
 
+# Mounting static files for images and CSS
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-
+# Jinja2 Templates directory
 templates = Jinja2Templates(directory="templates")
 
-
+# Route for the homepage
 @app.get("/")
 def index(request: Request): 
-        return templates.TemplateResponse(
-        name="index.html", context={"request": request}
-)
+    return templates.TemplateResponse(
+        "index.html", context={"request": request}
+    )
 
+# Function to scrape links from W3Schools
 def find_links():
     # Making a GET request
     r = requests.get('https://www.w3schools.com/references/index.php')
@@ -34,12 +36,12 @@ def find_links():
             output.append("https://www.w3schools.com" + href)
     return output
 
-@app.get("/")
+# Route for returning a random link
+@app.get("/random-link")
 def random_link():
     links = find_links()
     selected_link = random.choice(links)
     return JSONResponse(content={"link": selected_link})
 
-
-if __name__== "__main__":
-    uvicorn.run("main:app")
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="127.0.0.1", port=8000)
