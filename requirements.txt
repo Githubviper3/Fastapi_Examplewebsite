@@ -3,4 +3,3 @@ fastapi
 uvicorn
 requests
 bs4
-random
