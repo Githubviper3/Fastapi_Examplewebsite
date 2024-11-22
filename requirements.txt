@@ -1,0 +1,5 @@
+jinja2
+fastapi
+uvicorn
+requests
+bs4
