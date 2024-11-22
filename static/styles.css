@@ -1,0 +1,44 @@
+body {
+    background-color: #f0f0f2;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.MainCard {
+    width: 600px;
+    margin: 5em auto;
+    padding: 2em;
+    background-color: #fdfdff;
+    border-radius: 0.5em;
+    box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.grid-container {
+    display: grid;
+    gap: 50px 20px;
+    grid-template-columns: auto auto auto
+}
+
+#Random {
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 12px;
+    border: 0;
+    margin-top: 5px;
+    padding: 10px 24px;
+    box-shadow: 0 9px #999;
+}
+
+#Random:hover {
+    background-color: #3e8e41
+}
+
+#Random:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
