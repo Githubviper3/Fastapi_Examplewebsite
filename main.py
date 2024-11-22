@@ -34,7 +34,7 @@ def find_links():
             output.append("https://www.w3schools.com" + href)
     return output
 
-@app.get("/random-link")
+@app.get("/")
 def random_link():
     links = find_links()
     selected_link = random.choice(links)
